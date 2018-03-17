@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='python-vpic',
-    version='0.1.3',
+    version='0.1.4',
     description='Simple wrapper to the vPic API.',
     long_description=readme(),
     keywords='vPic',

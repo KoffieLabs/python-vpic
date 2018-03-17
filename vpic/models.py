@@ -9,4 +9,4 @@ class Vehicle(object):
 
     def __init__(self, **kwargs):
         for key, value in kwargs.items():
-            setattr(self, camel_to_snake(key), value)
+            setattr(self, camel_to_snake(key), value.strip())

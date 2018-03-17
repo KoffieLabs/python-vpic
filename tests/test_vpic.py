@@ -863,6 +863,6 @@ class VPicBulkTests(TestCase):
         for v in vehicles:
             self.assertIsInstance(v, vpic.models.Vehicle)
             raw_data = fake_db[v.vin]
-            self.assertEqual(v.make, raw_data['Make'])
-            self.assertEqual(v.model, raw_data['Model'])
-            self.assertEqual(v.model_year, raw_data['ModelYear'])
+            self.assertEqual(v.make, raw_data['Make'].strip())
+            self.assertEqual(v.model, raw_data['Model'].strip())
+            self.assertEqual(v.model_year, raw_data['ModelYear'].strip())
