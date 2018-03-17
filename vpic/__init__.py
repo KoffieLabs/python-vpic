@@ -27,7 +27,6 @@ class VPicAPI(object):
         data = ';'.join(vin_infos)
         response = requests.post(self.url, data={'DATA': data, 'format': 'JSON'})
         response.raise_for_status()
-        print('WTF:', response.json()['Results'])
         return [Vehicle(**r) for r in response.json()['Results']]
 
 
