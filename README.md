@@ -7,7 +7,7 @@ pip install python-vpic
 
 ## To use:
 ```
-import vpic
+from vpic import vpic
 
 # Single VIN lookup
 vehicle = vpic.lookup_vin('5FYD4FS147B031975')
