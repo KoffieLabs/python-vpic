@@ -22,7 +22,7 @@ class VPicAPI(object):
             info = [vin_info['vin']]
             year = vin_info.get('year')
             if year:
-                info.append(year)
+                info.append(str(year))
             vin_infos.append(','.join(info))
         data = ';'.join(vin_infos)
         response = requests.post(self.url, data={'DATA': data, 'format': 'JSON'})
