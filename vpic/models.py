@@ -8,5 +8,6 @@ def camel_to_snake(s):
 class Vehicle(object):
 
     def __init__(self, **kwargs):
+        self.raw = kwargs
         for key, value in kwargs.items():
             setattr(self, camel_to_snake(key), value.strip())
